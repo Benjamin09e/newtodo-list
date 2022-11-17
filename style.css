@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #a5e689, #d88578);
+  color: white;
+  font-family: "Poppins", open-sans;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.3rem;
+}
+
+header,
+form {
+  min-height: 15vh;
+  /*border: solid 1px black;
+  width: 50vw;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+.todo-input {
+  border: none;
+}
+
+form button {
+  color: #d88578;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #d88578;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.8rem;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #d88578;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background: #a5e689;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(10rem) rotate(25deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #d88578;
+  width: 9.5rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #d88578;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #d88578;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.select:hover::after {
+  background: white;
+  color: #d88578;
+}
+
+@media screen and (max-width: 1450px) {
+  header {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .filter-todo {
+    width: 90%;
+  }
+
+  
+
+  .todo-list {
+    width: 90%;
+  }
+
+  .todo-container {
+    width: 90%;
+  }
+
+  .todo-input {
+    width: 90%;
+  }
+}
